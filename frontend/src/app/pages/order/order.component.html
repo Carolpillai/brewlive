@@ -1,0 +1,123 @@
+@if (selectedItem) {
+<div class="order-container">
+  <div class="order-grid">
+    <div class="customization-side">
+      <div class="item-header">
+        <img [src]="selectedItem.image" alt="Coffee">
+        <div class="header-info">
+          <h1>{{selectedItem.name}}</h1>
+          <p>{{selectedItem.description}}</p>
+        </div>
+      </div>
+
+      <div class="custom-card">
+        <h3>Size</h3>
+        <div class="toggle-group">
+          <label class="toggle-option">
+            <input type="radio" name="size" value="small" [(ngModel)]="customization.size" (change)="calculatePrice()">
+            <span>Small</span>
+          </label>
+          <label class="toggle-option">
+            <input type="radio" name="size" value="medium" [(ngModel)]="customization.size" (change)="calculatePrice()">
+            <span>Medium</span>
+          </label>
+          <label class="toggle-option">
+            <input type="radio" name="size" value="large" [(ngModel)]="customization.size" (change)="calculatePrice()">
+            <span>Large (+₹80)</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="custom-card">
+        <h3>Milk Type</h3>
+        <div class="toggle-group flex-wrap">
+          @for (milk of ['whole', 'oat', 'almond', 'soy', 'none']; track milk) {
+            <label class="toggle-option">
+              <input type="radio" name="milk" [value]="milk" [(ngModel)]="customization.milk">
+              <span>{{milk | titlecase}}</span>
+            </label>
+          }
+        </div>
+      </div>
+
+      <div class="custom-card">
+        <h3>Sugar Level</h3>
+        <div class="toggle-group flex-wrap">
+          @for (sugar of ['none', 'light', 'medium', 'sweet']; track sugar) {
+            <label class="toggle-option">
+              <input type="radio" name="sugar" [value]="sugar" [(ngModel)]="customization.sugar">
+              <span>{{sugar | titlecase}}</span>
+            </label>
+          }
+        </div>
+      </div>
+
+      <div class="custom-card">
+        <h3>Extras</h3>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="checkbox" [(ngModel)]="customization.extraShot" (change)="calculatePrice()">
+            <span>Extra Shot (+₹40)</span>
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" [(ngModel)]="customization.whippedCream" (change)="calculatePrice()">
+            <span>Whipped Cream (+₹60)</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="custom-card">
+        <h3>Special Instructions</h3>
+        <textarea [(ngModel)]="customization.specialInstructions" placeholder="Any specific preferences?"></textarea>
+      </div>
+    </div>
+
+    <div class="summary-side">
+      <div class="summary-card">
+        <h2>Order Summary</h2>
+        <div class="summary-details">
+          <div class="summary-item">
+            <span>{{selectedItem.name}}</span>
+            <span>₹{{selectedItem.price | number:'1.0-0'}}</span>
+          </div>
+          @if (customization.size !== 'medium') {
+            <div class="summary-item">
+              <span>{{customization.size | titlecase}} Adjustment</span>
+              <span>{{customization.size === 'small' ? '-₹40' : '+₹80'}}</span>
+            </div>
+          }
+          @if (customization.extraShot) {
+            <div class="summary-item">
+              <span>Extra Shot</span>
+              <span>+₹40</span>
+            </div>
+          }
+          @if (customization.whippedCream) {
+            <div class="summary-item">
+              <span>Whipped Cream</span>
+              <span>+₹60</span>
+            </div>
+          }
+          <hr>
+          <div class="total-row">
+            <span>Total</span>
+            <span class="total-price">₹{{totalPrice | number:'1.0-0'}}</span>
+          </div>
+        </div>
+        
+        <div class="pairing-tip">
+          <p>💡 {{selectedItem.pairingSuggestion}}</p>
+        </div>
+
+        @if (error) {
+          <div class="error-msg" style="color: #ff6b6b; margin-top: 1rem; font-size: 0.9rem; text-align: center;">{{error}}</div>
+        }
+
+        <button class="btn-caramel w-100 mt-20" (click)="placeOrder()" [disabled]="loading">
+          {{ loading ? 'Placing Order...' : 'Place Order' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+}

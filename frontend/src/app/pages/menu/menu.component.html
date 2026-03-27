@@ -1,0 +1,77 @@
+<div class="menu-page">
+  <!-- Hero Section -->
+  <header class="menu-hero fade-in-up">
+    <div class="hero-content">
+      <h1>Our Curated Brews</h1>
+      <p>Hand-selected, artisan coffees crafted for your palate.</p>
+    </div>
+  </header>
+
+  <div class="menu-container">
+    @if (loading) {
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Brewing your menu...</p>
+      </div>
+    }
+
+    @if (error) {
+      <div class="error-state">
+        <p>{{error}} ☕️</p>
+        <button class="btn-caramel small mt-2" (click)="loadData()">Retry Connection</button>
+      </div>
+    }
+
+    @if (recommendations.length > 0) {
+      <section class="personalized-section fade-in-up">
+        <div class="section-badge">For You</div>
+        <div class="section-title">
+          <h2>We think you'd love these</h2>
+          <div class="underline"></div>
+        </div>
+        
+        <div class="recommendations-grid" [@listAnimation]="recommendations.length">
+          @for (item of recommendations; track item.name) {
+            <div class="recommendation-card" (click)="orderNow(item)">
+              <img [src]="item.image" [alt]="item.name">
+              <div class="rec-overlay">
+                <h3>{{item.name}}</h3>
+                <p>{{item.category}}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+    }
+
+    @for (group of groupedMenu; track group.category) {
+      <section class="category-section fade-in-up">
+        <div class="category-header">
+           <h2>{{group.category}}</h2>
+           <div class="line"></div>
+        </div>
+        
+        <div class="menu-grid" [@listAnimation]="group.items.length">
+          @for (item of group.items; track item.name) {
+            <div class="coffee-card">
+              <div class="card-image">
+                <img [src]="item.image" [alt]="item.name">
+                <div class="pairing-banner">
+                  <span>✨ {{item.pairingSuggestion}}</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-header">
+                  <h3>{{item.name}}</h3>
+                  <span class="price">₹{{item.price | number: '1.2-2'}}</span>
+                </div>
+                <p class="description">{{item.description}}</p>
+                <button class="btn-outline w-100" (click)="orderNow(item)">Order Now</button>
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+    }
+  </div>
+</div>

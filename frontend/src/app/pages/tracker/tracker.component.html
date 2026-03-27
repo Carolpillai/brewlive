@@ -1,0 +1,22 @@
+<div class="tracker-container">
+  <div class="tracker-card">
+    <header class="tracker-header">
+      <div class="success-icon">✅</div>
+      <h2>Order Confirmed!</h2>
+      <p class="order-id">Order ID: #{{orderId}}</p>
+    </header>
+
+    <div class="status-details">
+      <p>Your order has been successfully placed and sent to our baristas.</p>
+      <p>You can track the live status directly from your <strong>Recent Orders</strong> dashboard.</p>
+    </div>
+
+    @if (pointsEarned > 0) {
+      <div class="loyalty-alert">
+        <p>✨ You earned +{{pointsEarned}} Loyalty Points ✨</p>
+      </div>
+    }
+
+    <button class="btn-caramel w-100" routerLink="/dashboard">Go to Dashboard</button>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+@if (user) {
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Welcome back, {{user.name}} ✨</h1>
+    <p>Good to see you again. Fresh coffee is just a tap away.</p>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card loyalty">
+      <div class="card-icon">🏆</div>
+      <div class="card-info">
+        <h3>Loyalty Points</h3>
+        <p class="points">{{user.loyaltyPoints || 0}} <span class="sub">pts</span></p>
+        <div class="progress-bar">
+          <div class="progress-inner" [style.width.%]="((user.loyaltyPoints || 0) % 100)"></div>
+        </div>
+        <p class="next-reward">{{ 100 - ((user.loyaltyPoints || 0) % 100) }} pts to your next free coffee!</p>
+      </div>
+    </div>
+
+    <div class="summary-card favorite">
+      <div class="card-icon">☕</div>
+      <div class="card-info">
+        <h3>Your Favorite</h3>
+        <p class="drink-name">{{user.favoriteDrink || 'Latté'}}</p>
+        <button class="btn-caramel small" (click)="orderAgain({drink: user.favoriteDrink, totalPrice: 380})">Order Again</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <section class="recent-orders">
+      <h2>Recent Orders</h2>
+      <div class="orders-list">
+        @for (order of orders; track order._id) {
+          <div class="order-item">
+            <div class="order-main">
+              <h3>{{order.drink}}</h3>
+              <span>{{order.createdAt | date:'MMM dd, hh:mm a'}}</span>
+              @if (getEta(order)) {
+                <span style="color: var(--caramel); margin-left: 10px; font-weight: 500; font-size: 0.85rem;">⏱️ {{getEta(order)}}</span>
+              }
+            </div>
+            <div class="order-details">
+              <span class="status-badge" [class]="order.status.toLowerCase()">{{order.status}}</span>
+              <span class="price">₹{{order.totalPrice | number:'1.0-0'}}</span>
+              <button class="btn-caramel small" (click)="orderAgain(order)">Order Again</button>
+            </div>
+          </div>
+        } @empty {
+          @if (offlineError) {
+            <p class="no-orders" style="color: red; font-weight: bold;">Failed to connect to backend server. Please make sure node server.js is running.</p>
+          } @else {
+            <p class="no-orders">No orders yet. Try our menu!</p>
+          }
+        }
+      </div>
+    </section>
+
+    <section class="recommendations">
+      <h2>We think you'd love these</h2>
+      <div class="rec-grid">
+        @for (rec of recommendations; track rec._id) {
+          <div class="rec-item">
+            <img [src]="rec.image" [alt]="rec.name">
+            <div class="rec-info">
+              <h3>{{rec.name}}</h3>
+              <p>{{rec.category}}</p>
+              <button class="btn-caramel small" routerLink="/menu">View Menu</button>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+</div>
+}

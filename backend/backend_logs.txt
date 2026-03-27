@@ -1,0 +1,159 @@
+﻿[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] or send SIGHUP to 8336 to restart[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+[33m[nodemon] forking[39m
+[33m[nodemon] child pid: 7360[39m
+[33m[nodemon] files triggering change check: backend_logs.txt[39m
+[33m[nodemon] matched rule: **\*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[33m[nodemon] watching 12 files[39m
+[33m[nodemon] files triggering change check: backend_logs.txt[39m
+[33m[nodemon] matched rule: **\*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[33m[nodemon] files triggering change check: backend_logs.txt[39m
+[33m[nodemon] matched rule: **\*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ≡ƒñû agentic secret storage: https://dotenvx.com/as2
+[33m[nodemon] files triggering change check: backend_logs.txt[39m
+[33m[nodemon] matched rule: **\*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+Connected to MongoDB
+Server running on port 5000
+[33m[nodemon] files triggering change check: backend_logs.txt[39m
+[33m[nodemon] matched rule: **\*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[33m[nodemon] files triggering change check: backend_logs.txt[39m
+[33m[nodemon] matched rule: **\*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[33m[nodemon] files triggering change check: backend_logs.txt[39m
+[33m[nodemon] matched rule: **\*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+Registration request for: carolpillai03@gmail.com
+node.exe : Registration 
+Error: TypeError: next is 
+not a function
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Registr  
+  ation Er... not a functi   
+ on:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+    at model.<anonymous> 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\mo
+dels\User.js:16:3)
+    at async Kareem.execPre 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\kareem\index.js:70
+:24)
+    at async model.$__save 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\model
+.js:394:5)
+    at async model.save 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\model
+.js:664:5)
+    at async C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\ro
+utes\auth.js:18:5
+Registration request for: carolpillai03@gmail.com
+Registration Error: 
+ValidationError: User 
+validation failed: name: 
+Path `name` is required.
+    at model.validate 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\docum
+ent.js:2864:36)
+    at process.processTicksAn
+dRejections (node:internal/pr
+ocess/task_queues:103:5)
+    at async model.$__save 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\model
+.js:390:7)
+    at async model.save 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\model
+.js:664:5)
+    at async C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\ro
+utes\auth.js:18:5 {
+  errors: {
+    name: ValidatorError: 
+Path `name` is required.
+        at 
+SchemaString.doValidate 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\schem
+aType.js:1432:13)
+        at model.validate 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\docum
+ent.js:2842:20)
+        at process.processTic
+ksAndRejections (node:interna
+l/process/task_queues:103:5)
+        at async 
+model.$__save 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\model
+.js:390:7)
+        at async model.save 
+(C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\no
+de_modules\mongoose\lib\model
+.js:664:5)
+        at async 
+C:\Users\Carol 
+Pillai\Desktop\College\Mean 
+project 2\brewlive\backend\ro
+utes\auth.js:18:5 {
+      properties: [Object],
+      kind: 'required',
+      path: 'name',
+      value: '',
+      reason: undefined,
+      Symbol(mongoose#validat
+orError): true
+    }
+  },
+  _message: 'User validation 
+failed'
+}

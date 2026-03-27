@@ -1,0 +1,77 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in-up">
+      <div class="logo">
+        <img src="https://img.icons8.com/plasticine/100/000000/coffee-beans.png" alt="BrewLive">
+        <h1>BrewLive</h1>
+      </div>
+      <h2>Wake Up Your Senses.</h2>
+      <p>Discover the finest artisanal coffees, hand-roasted and delivered to your doorstep. Experience coffee like never before.</p>
+      <div class="actions">
+        <button class="btn-caramel" routerLink="/menu">Order Now</button>
+        @if (!isLoggedIn) {
+          <button class="btn-outline" routerLink="/login">Sign In</button>
+        } @else {
+          <button class="btn-outline" routerLink="/dashboard">Your Dashboard</button>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="section-title fade-in">
+      <h2>Why Choose BrewLive?</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card slide-up" style="--delay: 0.1s">
+        <div class="icon-wrap">
+          <img src="https://img.icons8.com/wired/64/D4A96A/coffee-beans.png" alt="Beans">
+        </div>
+        <h3>Artisanal Roasting</h3>
+        <p>Small batch roasted by award-winning artisans to preserve natural flavor profiles.</p>
+      </div>
+      <div class="feature-card slide-up" style="--delay: 0.3s">
+        <div class="icon-wrap">
+          <img src="https://img.icons8.com/wired/64/D4A96A/coffee-to-go.png" alt="Fresh">
+        </div>
+        <h3>Farm to Cup</h3>
+        <p>Direct trade relationships ensuring fair compensation and peak freshness.</p>
+      </div>
+      <div class="feature-card slide-up" style="--delay: 0.5s">
+        <div class="icon-wrap">
+          <img src="https://img.icons8.com/wired/64/D4A96A/delivery.png" alt="Delivery">
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Roasted to order and shipped within 24 hours for maximum flavor retention.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight Section -->
+  <section class="highlight-section">
+    <div class="highlight-content fade-in">
+      <h2>The Perfect Pour</h2>
+      <p>Every bean has a story. Our single-origin selections bring out the unique characteristics of their terroir. From vibrant fruit notes of Ethiopian Yirgacheffe to the smooth chocolatey body of Colombian Supremo, your perfect morning starts here.</p>
+      <button class="btn-caramel mt-4" routerLink="/menu">Explore Collection</button>
+    </div>
+    <div class="highlight-image fade-in-right">
+      <img class="floating-img" src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Coffee Pouring">
+    </div>
+  </section>
+
+  <!-- Footer/Newsletter -->
+  <footer class="footer fade-in">
+    <div class="footer-content">
+      <h2>Join the BrewLive Club</h2>
+      <p>Get exclusive access to limited roasts and 15% off your first order.</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Your Email address">
+        <button class="btn-caramel">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+</div>

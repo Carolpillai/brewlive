@@ -1,0 +1,863 @@
+﻿Application bundle generation failed. [1.754 seconds] - 2026-03-26T18:16:16.524Z
+
+node.exe : [1m[31m[31mX [
+41;31m[[41;97mERROR[41;31m]
+[0m [1mTS2307: Cannot find 
+module '@angular/common' or 
+its corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: ([1m[3  
+  1m[31mX...r-compiler][   
+ 0m:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+
+    src/app/pages/dashboard/d
+ashboard.component.ts:3:38:
+[37m      3 Γöé import { 
+DatePipe, DecimalPipe } from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+                     
+[32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNG1010: 
+'imports' must be an array 
+of components, directives, 
+pipes, or NgModules.
+  Value could not be 
+determined statically.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/dashboard/d
+ashboard.component.ts:11:26:
+[37m      11 Γöé   imports: 
+[RouterModule, 
+[32mDatePipe[37m, 
+DecimalPipe],
+         Γò╡                 
+          [32m~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/pages/dashboard/d
+ashboard.component.ts:11:26:
+[37m      11 Γöé   imports: 
+[RouterModule, 
+[32mDatePipe[37m, 
+DecimalPipe],
+         Γò╡                 
+          [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNG1010: 
+'imports' must be an array 
+of components, directives, 
+pipes, or NgModules.
+  Value could not be 
+determined statically.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/dashboard/d
+ashboard.component.ts:11:36:
+[37m      11 Γöé   imports: 
+[RouterModule, DatePipe, 
+[32mDecimalPipe[37m],
+         Γò╡                 
+                    
+[32m~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/pages/dashboard/d
+ashboard.component.ts:11:36:
+[37m      11 Γöé   imports: 
+[RouterModule, DatePipe, 
+[32mDecimalPipe[37m],
+         Γò╡                 
+                    
+[32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mTS2307: 
+Cannot find module 
+'@angular/common' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/home/home.c
+omponent.ts:2:29:
+[37m      2 Γöé import { 
+CommonModule } from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+            
+[32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNG1010: 
+'imports' must be an array 
+of components, directives, 
+pipes, or NgModules.
+  Value could not be 
+determined statically.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/home/home.c
+omponent.ts:9:12:
+[37m      9 Γöé   imports: 
+[[32mCommonModule[37m, 
+RouterModule],
+        Γò╡             
+[32m~~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/pages/home/home.c
+omponent.ts:9:12:
+[37m      9 Γöé   imports: 
+[[32mCommonModule[37m, 
+RouterModule],
+        Γò╡             
+[32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mTS2307: 
+Cannot find module 
+'@angular/common' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/menu/menu.c
+omponent.ts:2:28:
+[37m      2 Γöé import { 
+DecimalPipe } from 
+[32m'@angular/common'[37m; 
+// Only pipe
+        Γò╡                  
+           
+[32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNG1010: 
+'imports' must be an array 
+of components, directives, 
+pipes, or NgModules.
+  Value could not be 
+determined statically.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/menu/menu.c
+omponent.ts:11:26:
+[37m      11 Γöé   imports: 
+[RouterModule, 
+[32mDecimalPipe[37m],
+         Γò╡                 
+          
+[32m~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/pages/menu/menu.c
+omponent.ts:11:26:
+[37m      11 Γöé   imports: 
+[RouterModule, 
+[32mDecimalPipe[37m],
+         Γò╡                 
+          
+[32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mTS2307: 
+Cannot find module 
+'@angular/common' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/order/order
+.component.ts:2:43:
+[37m      2 Γöé 
+...imalPipe, TitleCasePipe } 
+from 
+[32m'@angular/common'[37m; 
+// Specific pipes
+        Γò╡                  
+                 
+[32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNG1010: 
+'imports' must be an array 
+of components, directives, 
+pipes, or NgModules.
+  Value could not be 
+determined statically.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/order/order
+.component.ts:10:39:
+[37m      10 Γöé   imports: 
+[FormsModule, RouterModule, 
+[32mDecimalPipe[37m, 
+TitleCasePipe],
+         Γò╡                 
+                       
+[32m~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/pages/order/order
+.component.ts:10:39:
+[37m      10 Γöé   imports: 
+[FormsModule, RouterModule, 
+[32mDecimalPipe[37m, 
+TitleCasePipe],
+         Γò╡                 
+                       
+[32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNG1010: 
+'imports' must be an array 
+of components, directives, 
+pipes, or NgModules.
+  Value could not be 
+determined statically.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/order/order
+.component.ts:10:52:
+[37m      10 Γöé   imports: 
+[FormsModule, RouterModule, 
+DecimalPipe, 
+[32mTitleCasePipe[37m],
+         Γò╡                 
+                             
+       [32m~~~~~~~~~~~~~[0m
+
+  Unknown reference.
+
+    src/app/pages/order/order
+.component.ts:10:52:
+[37m      10 Γöé   imports: 
+[FormsModule, RouterModule, 
+DecimalPipe, 
+[32mTitleCasePipe[37m],
+         Γò╡                 
+                             
+       [32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    node_modules/@angular/for
+ms/fesm2022/forms.mjs:11:36:
+[37m      11 Γöé import { 
+╔╡getDOM as _getDOM } from 
+[32m'@angular/common'[37m;
+         Γò╡                 
+                   
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    node_modules/@angular/pla
+tform-browser/fesm2022/_brows
+er-chunk.mjs:7:232:
+[37m      7 Γöé 
+...ATFORM_BROWSER_ID as 
+_PLATFORM_BROWSER_ID } from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+                             
+      
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    node_modules/@angular/pla
+tform-browser/fesm2022/_dom_r
+enderer-chunk.mjs:7:46:
+[37m      7 Γöé import { 
+DOCUMENT, ╔╡getDOM as 
+_getDOM } from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+                            
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    node_modules/@angular/pla
+tform-browser/fesm2022/animat
+ions.mjs:12:25:
+[37m      12 Γöé import { 
+DOCUMENT } from 
+[32m'@angular/common'[37m;
+         Γò╡                 
+         
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    node_modules/@angular/pla
+tform-browser/fesm2022/platfo
+rm-browser.mjs:8:46:
+[37m      8 Γöé import { 
+╔╡getDOM as _getDOM, 
+DOCUMENT } from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+                            
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve 
+"@angular/common/http"[0m
+
+    node_modules/@angular/pla
+tform-browser/fesm2022/platfo
+rm-browser.mjs:14:66:
+[37m      14 Γöé 
+...sferCache as 
+_withHttpTransferCache } 
+from [32m'@angular/common/ht
+tp'[37m;
+         Γò╡                 
+                             
+ [32m~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  The module 
+"./fesm2022/http.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:31:17:
+[37m      31 Γöé       
+"default": [32m"./fesm2022/h
+ttp.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~[
+0m
+
+  You can mark the path 
+"@angular/common/http" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    node_modules/@angular/rou
+ter/fesm2022/_router-chunk.mj
+s:7:35:
+[37m      7 Γöé import { 
+DOCUMENT, Location } from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+                  
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    node_modules/@angular/rou
+ter/fesm2022/_router_module-c
+hunk.mjs:7:20:
+[37m      7 Γöé import * as 
+i3 from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+   [32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    node_modules/@angular/rou
+ter/fesm2022/router.mjs:10:7:
+[37m      10 Γöé import 
+[32m'@angular/common'[37m;
+         Γò╡        
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve 
+"@angular/common/http"[0m
+
+    
+src/app/app.config.ts:2:34:
+[37m      2 Γöé import { 
+provideHttpClient } from [32
+m'@angular/common/http'[37m;
+        Γò╡                  
+                 [32m~~~~~~~
+~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/http.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:31:17:
+[37m      31 Γöé       
+"default": [32m"./fesm2022/h
+ttp.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~[
+0m
+
+  You can mark the path 
+"@angular/common/http" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    src/app/pages/dashboard/d
+ashboard.component.ts:4:38:
+[37m      4 Γöé import { 
+DatePipe, DecimalPipe } from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+                     
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    src/app/pages/home/home.c
+omponent.ts:3:29:
+[37m      3 Γöé import { 
+CommonModule } from 
+[32m'@angular/common'[37m;
+        Γò╡                  
+            
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    src/app/pages/menu/menu.c
+omponent.ts:3:28:
+[37m      3 Γöé import { 
+DecimalPipe } from 
+[32m'@angular/common'[37m; 
+// Only pipe
+        Γò╡                  
+           
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve "@angular/common"[0m
+
+    src/app/pages/order/order
+.component.ts:3:43:
+[37m      3 Γöé 
+...imalPipe, TitleCasePipe } 
+from 
+[32m'@angular/common'[37m; 
+// Specific pipes
+        Γò╡                  
+                 
+[32m~~~~~~~~~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/common.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:27:17:
+[37m      27 Γöé       
+"default": [32m"./fesm2022/c
+ommon.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~~~
+[0m
+
+  You can mark the path 
+"@angular/common" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve 
+"@angular/common/http"[0m
+
+    src/app/services/auth.ser
+vice.ts:4:20:
+[37m      4 Γöé import * as 
+i1 from [32m"@angular/common
+/http"[37m;
+        Γò╡                  
+   [32m~~~~~~~~~~~~~~~~~~~~~
+~[0m
+
+  The module 
+"./fesm2022/http.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:31:17:
+[37m      31 Γöé       
+"default": [32m"./fesm2022/h
+ttp.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~[
+0m
+
+  You can mark the path 
+"@angular/common/http" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mCould not 
+resolve 
+"@angular/common/http"[0m
+
+    src/app/services/order.se
+rvice.ts:2:28:
+[37m      2 Γöé import { 
+HttpHeaders } from [32m'@ang
+ular/common/http'[37m;
+        Γò╡                  
+           [32m~~~~~~~~~~~~~
+~~~~~~~~~[0m
+
+  The module 
+"./fesm2022/http.mjs" was 
+not found on the file system:
+
+    node_modules/@angular/com
+mon/package.json:31:17:
+[37m      31 Γöé       
+"default": [32m"./fesm2022/h
+ttp.mjs"[37m
+         Γò╡                 
+ [32m~~~~~~~~~~~~~~~~~~~~~[
+0m
+
+  You can mark the path 
+"@angular/common/http" as 
+external to exclude it from 
+the bundle, which will 
+remove this error and leave 
+the unresolved path in the 
+bundle.
+
+[39m[22m

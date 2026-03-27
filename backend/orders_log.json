@@ -1,0 +1,38 @@
+[
+  {
+    "customization": {
+      "size": "medium",
+      "milk": "whole",
+      "sugar": "medium",
+      "extraShot": true,
+      "whippedCream": false,
+      "specialInstructions": ""
+    },
+    "_id": "69c6eea1d64f5255b7c7b84e",
+    "user": "69c6d0341ce80d53fdfe67ba",
+    "drink": "Matcha Latte",
+    "totalPrice": 420.5,
+    "status": "Pending",
+    "pointsEarned": 420,
+    "createdAt": "2026-03-27T20:54:57.802Z",
+    "__v": 0
+  },
+  {
+    "customization": {
+      "size": "large",
+      "milk": "whole",
+      "sugar": "medium",
+      "extraShot": true,
+      "whippedCream": false,
+      "specialInstructions": ""
+    },
+    "_id": "69c6f019d64f5255b7c7b85c",
+    "user": "69c6d0341ce80d53fdfe67ba",
+    "drink": "Matcha Latte",
+    "totalPrice": 540,
+    "status": "Pending",
+    "pointsEarned": 540,
+    "createdAt": "2026-03-27T21:01:13.962Z",
+    "__v": 0
+  }
+]

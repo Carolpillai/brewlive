@@ -1,0 +1,107 @@
+<div class="auth-layout">
+  <!-- Left Side: Graphic / Branding -->
+  <div class="auth-banner">
+    <div class="banner-content fade-in-up">
+      <div class="logo">
+        <img src="https://img.icons8.com/plasticine/100/000000/coffee-beans.png" alt="BrewLive Logo">
+        <h1>BrewLive</h1>
+      </div>
+      <h2>Join the Coffee Revolution</h2>
+      <p>Experience the finest beans from around the world, delivered fresh to your door. Join a community of authentic coffee lovers.</p>
+    </div>
+  </div>
+
+  <!-- Right Side: Form -->
+  <div class="auth-form-container">
+    <div class="auth-card" [@fadeSlide]>
+      <div class="mobile-logo">
+         <img src="https://img.icons8.com/plasticine/100/000000/coffee-beans.png" alt="BrewLive Logo">
+      </div>
+
+
+      <!-- Login Form -->
+      @if (isLogin) {
+        <form (ngSubmit)="onSubmit()" class="form-content">
+          <div class="form-header">
+            <h2>Welcome Back</h2>
+            <p>Please enter your details to sign in.</p>
+          </div>
+
+          @if (error) {
+            <div class="error-banner">{{error}}</div>
+          }
+          
+          <div class="form-group">
+            <label>Email Address</label>
+            <div class="input-wrap">
+              <input type="email" name="loginEmail" [(ngModel)]="loginData.email" required placeholder="name@example.com">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Password</label>
+            <div class="input-wrap">
+              <input type="password" name="loginPassword" [(ngModel)]="loginData.password" required placeholder="Enter your password">
+            </div>
+          </div>
+          
+          <button type="submit" class="btn-caramel w-100 mt-2" [disabled]="loading">
+             {{ loading ? 'Authenticating...' : 'Sign In' }}
+          </button>
+          
+          <div class="toggle-link">
+            Don't have an account? <button type="button" class="text-btn" (click)="toggleAuth()">Sign up for free</button>
+          </div>
+        </form>
+      } @else {
+        <!-- Register Form -->
+        <form (ngSubmit)="onSubmit()" class="form-content">
+          <div class="form-header">
+            <h2>Create Account</h2>
+            <p>Join BrewLive today.</p>
+          </div>
+
+          @if (error) {
+            <div class="error-banner">{{error}}</div>
+          }
+          
+          <div class="form-group">
+            <label>Full Name</label>
+            <div class="input-wrap">
+              <input type="text" name="regName" [(ngModel)]="registerData.name" required placeholder="John Doe">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Email Address</label>
+            <div class="input-wrap">
+              <input type="email" name="regEmail" [(ngModel)]="registerData.email" required placeholder="name@example.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <div class="input-wrap">
+              <input type="password" name="regPassword" [(ngModel)]="registerData.password" required placeholder="Create a password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <div class="input-wrap">
+              <input type="password" name="regConfirmPassword" [(ngModel)]="registerData.confirmPassword" required placeholder="Confirm your password">
+            </div>
+          </div>
+          
+          <button type="submit" class="btn-caramel w-100 mt-2" [disabled]="loading">
+            {{ loading ? 'Creating Account...' : 'Sign Up' }}
+          </button>
+          
+          <div class="toggle-link">
+            Already have an account? <button type="button" class="text-btn" (click)="toggleAuth()">Sign In</button>
+          </div>
+        </form>
+      }
+    </div>
+  </div>
+</div>

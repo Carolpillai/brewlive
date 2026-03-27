@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo" routerLink="/home">
+      <img src="/logo.png" alt="BrewLive" style="width: 40px; height: 40px;">
+      <span>BrewLive</span>
+    </div>
+
+    <div class="nav-links">
+      <a routerLink="/menu" routerLinkActive="active">Menu</a>
+      @if (authService.isLoggedIn()) {
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      }
+      <div class="auth-group">
+        @if (user) {
+          <span class="user-greeting">Welcome, {{user.name}}</span>
+        }
+        @if (!authService.isLoggedIn()) {
+          <button class="btn-caramel small" routerLink="/login">Login</button>
+        } @else {
+          <button class="btn-outline white small" (click)="logout()">Logout</button>
+        }
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
