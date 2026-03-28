@@ -35,7 +35,7 @@ app.get('/debug-orders', async (req, res) => {
   res.json({ orders, users });
 });
 
-const PORT = 5050; // Force to 5050 to align with frontend services
+const PORT = process.env.PORT || 5050; // Use environment PORT for hosting or 5050 for local
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/brewlive';
 
 mongoose.connect(MONGO_URI)
