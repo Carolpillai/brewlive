@@ -1,5 +1,5 @@
 import { Component, OnInit, inject, ChangeDetectorRef } from '@angular/core';
-import { DecimalPipe } from '@angular/common'; // Only pipe
+import { CommonModule, DecimalPipe } from '@angular/common'; 
 import { Router, RouterModule } from '@angular/router';
 import { MenuService } from '../../services/menu.service';
 import { AuthService } from '../../services/auth.service';
@@ -10,7 +10,7 @@ import { of } from 'rxjs';
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [RouterModule, DecimalPipe],
+  imports: [RouterModule, DecimalPipe, CommonModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
   animations: [

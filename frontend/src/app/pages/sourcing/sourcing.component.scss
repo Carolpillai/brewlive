@@ -1,0 +1,146 @@
+.sourcing-container {
+  background-color: var(--cream);
+  min-height: 100vh;
+}
+
+.sourcing-hero {
+  padding: 100px 5%;
+  background: linear-gradient(rgba(44, 26, 14, 0.7), rgba(44, 26, 14, 0.7)), url('https://images.unsplash.com/photo-1544413647-ad5b2ca12781?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  
+  h1 { font-size: 4rem; color: var(--caramel); margin-bottom: 20px; }
+  p { font-size: 1.5rem; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+}
+
+.origins-section {
+  padding: 100px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+  .section-title {
+    margin-bottom: 70px;
+    h2 { font-size: 3rem; color: var(--dark-brown); margin-bottom: 15px; }
+    .underline { height: 4px; width: 80px; background: var(--caramel); margin: 0 auto; border-radius: 2px; }
+  }
+}
+
+.origins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.origin-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  transition: transform 0.4s ease;
+  text-align: left;
+
+  &:hover {
+    transform: translateY(-10px);
+    .image-wrapper img { transform: scale(1.1); }
+  }
+
+  .image-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .region-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--caramel);
+      color: var(--dark-brown);
+      padding: 5px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  }
+
+  .origin-info {
+    padding: 30px;
+    h3 { font-size: 1.5rem; color: var(--dark-brown); margin-bottom: 15px; }
+    p { color: var(--coffee-brown); line-height: 1.6; }
+  }
+}
+
+.ethics-section {
+  padding: 100px 10%;
+  background: var(--dark-brown);
+  color: var(--cream);
+  text-align: center;
+
+  .ethics-content {
+    max-width: 700px;
+    margin: 0 auto;
+
+    h2 { font-size: 3rem; color: var(--caramel); margin-bottom: 30px; }
+    p { font-size: 1.25rem; line-height: 1.8; opacity: 0.9; margin-bottom: 50px; }
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+
+  .stat-item {
+    span { font-size: 4rem; font-weight: bold; color: var(--caramel); display: block; }
+    p { font-size: 1.1rem; opacity: 0.8; margin-top: 5px; }
+  }
+}
+
+/* Common Animations */
+.fade-in { animation: fadeIn 1s ease-out forwards; }
+.slide-up { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; animation-delay: var(--delay); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 768px) {
+  .sourcing-hero {
+    padding: 60px 20px;
+    h1 { font-size: 2.5rem; }
+    p { font-size: 1.1rem; }
+  }
+
+  .origins-section {
+    padding: 60px 20px;
+    .section-title {
+      margin-bottom: 40px;
+      h2 { font-size: 2.2rem; }
+    }
+  }
+
+  .origins-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ethics-section {
+    padding: 60px 20px;
+    .ethics-content h2 { font-size: 2.2rem; }
+    .ethics-content p { font-size: 1.1rem; }
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 40px;
+    .stat-item span { font-size: 3rem; }
+  }
+}

@@ -15,11 +15,20 @@ export class AppComponent {
   user: any;
 
   public authService = inject(AuthService);
+  mobileMenuOpened = false;
 
   constructor() {
     this.authService.currentUser$.subscribe(user => {
       this.user = user;
     });
+  }
+
+  toggleMobileMenu(): void {
+    this.mobileMenuOpened = !this.mobileMenuOpened;
+  }
+
+  closeMobileMenu(): void {
+    this.mobileMenuOpened = false;
   }
 
   logout(): void {

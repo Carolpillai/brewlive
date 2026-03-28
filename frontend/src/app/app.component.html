@@ -1,27 +1,41 @@
-<nav class="navbar">
+<nav class="navbar" [class.mobile-open]="mobileMenuOpened">
   <div class="nav-container">
-    <div class="nav-logo" routerLink="/home">
-      <img src="/logo.png" alt="BrewLive" style="width: 40px; height: 40px;">
+    <div class="nav-logo" routerLink="/home" (click)="closeMobileMenu()">
+      <img src="https://img.icons8.com/plasticine/100/000000/coffee-beans.png" alt="BrewLive" style="width: 40px; height: 40px;">
       <span>BrewLive</span>
     </div>
 
+    <!-- Hamburger Menu -->
+    <div class="hamburger" (click)="toggleMobileMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
     <div class="nav-links">
-      <a routerLink="/menu" routerLinkActive="active">Menu</a>
+      <a routerLink="/menu" routerLinkActive="active" (click)="closeMobileMenu()">Menu</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()">Our Story</a>
+      <a routerLink="/sourcing" routerLinkActive="active" (click)="closeMobileMenu()">Sourcing</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a>
+      
       @if (authService.isLoggedIn()) {
-        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        <a routerLink="/dashboard" routerLinkActive="active" (click)="closeMobileMenu()">Dashboard</a>
       }
+      
       <div class="auth-group">
         @if (user) {
           <span class="user-greeting">Welcome, {{user.name}}</span>
         }
         @if (!authService.isLoggedIn()) {
-          <button class="btn-caramel small" routerLink="/login">Login</button>
+          <button class="btn-caramel small" routerLink="/login" (click)="closeMobileMenu()">Login</button>
         } @else {
-          <button class="btn-outline white small" (click)="logout()">Logout</button>
+          <button class="btn-outline white small" (click)="logout(); closeMobileMenu()">Logout</button>
         }
       </div>
     </div>
   </div>
 </nav>
+
+<div class="mobile-overlay" (click)="closeMobileMenu()" [class.active]="mobileMenuOpened"></div>
 
 <router-outlet></router-outlet>

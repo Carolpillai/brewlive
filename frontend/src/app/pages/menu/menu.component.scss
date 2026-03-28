@@ -297,3 +297,42 @@
 }
 
 .w-100 { width: 100%; box-sizing: border-box; }
+@media (max-width: 768px) {
+  .menu-hero {
+    min-height: 250px;
+    height: 30vh;
+    .hero-content {
+      padding: 20px 30px;
+      h1 { font-size: 2.2rem; }
+      p { font-size: 1rem; }
+    }
+  }
+
+  .menu-container {
+    margin-top: -30px;
+  }
+
+  .personalized-section {
+    padding: 30px 20px;
+    margin-bottom: 50px;
+    .section-title h2 { font-size: 1.8rem; }
+  }
+
+  .recommendations-grid .recommendation-card {
+    min-width: 260px;
+    height: 180px;
+  }
+
+  .category-section {
+    margin-top: 50px;
+    .category-header h2 { font-size: 1.8rem; }
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .coffee-card .card-image { height: 200px; }
+  .coffee-card .card-content { padding: 20px; }
+}
