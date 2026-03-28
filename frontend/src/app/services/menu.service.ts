@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { timeout } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
-  private apiUrl = 'http://localhost:5050/api/menu';
+  private apiUrl = `${environment.apiUrl}/menu`;
 
   constructor(private http: HttpClient) {}
 
